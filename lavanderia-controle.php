@@ -4,7 +4,7 @@ include("conectar.php");
 
 <?php
 function inserirCliente($conexao,$nome,$email,$nascimento,$cep,$endereco,$bairro,$cidade,$estado,$telefone,$assunto,$mensagem){
-    $query="INSERT INTO cliente(nome,email,nascimento,cep,endereco,bairro,cidade,estado,telefone,assunto,mensagem) values('{$nome}','{$email}',{$nascimento},'{$cep}','{$endereco}','{$bairro}','{$cidade}','{$estado}','{$telefone}','{$assunto}','{$mensagem}')";
+    $query="INSERT INTO cliente(nome,email,'nascimento',cep,endereco,bairro,cidade,estado,telefone,assunto,mensagem) values('{$nome}','{$email}',{$nascimento},'{$cep}','{$endereco}','{$bairro}','{$cidade}','{$estado}','{$telefone}','{$assunto}','{$mensagem}')";
     return mysqli_query($conexao,$query);
 
 }
